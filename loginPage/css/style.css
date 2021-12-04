@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+input {
+    border: none;
+    outline: none;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto 3rem;
+    padding: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.brand {
+    width: 450px;
+    margin: 3rem auto;
+}
+.logo {
+    height: 5rem;
+}
+.blank {
+    width: calc(450px + 3rem); /*3rem = .boxes的padding*2，目的是為了讓.header和.boxes的flex-wrap同時觸發*/
+    padding: 0 1.5rem;
+    margin: auto;
+}
+
+.boxes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.loginbox {
+    width: 450px;
+    display: inline-block;
+    margin: auto;
+}
+.login {
+    color: #858A75;
+    margin-bottom:  1.5rem;
+}
+.login p {
+    margin: 0 0 0.2rem;
+}
+.loginbox label {
+    color: #858A75;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.loginbox input {
+    background-color: transparent;
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #34494E;
+    color: #858A75;
+    padding: 0.5rem 0;
+}
+.loginbox input::placeholder {
+    color: #D8DDBC;
+}
+.loginbox button {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 2rem 0 4rem;
+    background-color: transparent;
+    border: 1px solid #C2C272;
+    color: #C2C272;
+    border-radius: 1px;
+}
+.loginbox button:hover {
+    color: #F5F3EB;
+    background-color: #C2C272;
+}
+.input-eng-translation {
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: max-content;
+    overflow: visible;
+    color: #D7DBBA;
+    font-size: 0.6rem;
+    z-index: -1;
+}
+.left-6word{
+    left: 6.5rem; /*Placeholder有6個字寬度為6rem + 中間的空間 0.5rem */
+}
+.left-5word{
+    left: 5.5rem; /*Placeholder有5個字寬度為6rem + 中間的空間 0.5rem */
+}
+.left-10word{
+    left:10.5rem;
+}
+
+.buttonbox {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    padding: 0rem 1rem 1rem;
+    margin: auto;
+}
+.buttongroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.button {
+    user-select: none;
+    -moz-user-select: none;
+    text-align: center;
+    width: 8.3rem;
+    margin: 0.5rem 0;
+}
+.buttonimage {
+    width: 6rem;
+    display: inline-block;
+}
+.buttonimage-blank {
+    width: 6rem;
+    display: inline-block;
+}
+.button p {
+    text-align: center;
+    margin:0.5rem 0 0.3rem;
+    color: #858A75;
+}
+.button span {
+    display: block;
+    font-size: 0.6rem;
+    color: #858A75;
+}
+
+.footer, .footer-sm {
+    background-color: #F1E8DA;
+    width: 100%;
+}
+.footer-sm {
+    display: none;
+}
+.footer p, .footer-sm p {
+    font-weight: 500;
+    font-size: 0.7rem;
+    color:#858A75;
+    margin: 0.35rem 0;
+}
+.footer-info {
+    width: 80%;
+    margin: auto;
+    padding: 1.5rem;
+}
+.footer img {
+    height: 1.2rem;
+    margin-bottom: 1rem;
+}
+.footer-info-sm {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    margin: auto;
+}
+.footer-info-sm img {
+    display: block;
+    height: 1rem;
+}
+@media (max-width:769px) {
+    * {
+       font-size: 16px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width:551px) {
+    * {
+       font-size: 14px;
+    }
+
+    .buttonbox {
+        flex-wrap: wrap;
+        padding: 0rem;
+    }
+    .buttongroup {
+        flex-grow: 1;
+    }
+
+    .footer {
+        display: none;
+    }
+    .footer-sm {
+        display: block;
+    }
+    
+}
+
+/*Utility*/
+.color-C0C072 {
+    color: #C0C072
+}
