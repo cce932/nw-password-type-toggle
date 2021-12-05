@@ -25,3 +25,17 @@ Array.prototype.forEach.call(buttons, (button) => {
         button.children[0].src = oldsrc;
     })
 })
+
+const PasswordToggleIcons = document.getElementsByClassName("toggle-password");
+Array.prototype.forEach.call(PasswordToggleIcons, (icon) => {
+    icon.addEventListener("click", (e) => {
+        e.target.classList.toggle("fa-eye");
+        e.target.classList.toggle("fa-eye-slash");
+        var status = e.target.parentNode.parentNode.firstElementChild.firstElementChild;
+        if (status.getAttribute("type") === "password") {
+            status.setAttribute("type", "text");
+        } else {
+            status.setAttribute("type", "password");
+        }
+    });
+});

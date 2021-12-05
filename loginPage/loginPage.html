@@ -4,6 +4,7 @@
         <title>登入頁</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -21,20 +22,27 @@
             
             <div class="boxes">
                 <div class="loginbox">
-                    <div class="login">
-                        <p>帳號 User ID</p>
-                        <label>                           
-                            <input class="inputbox" placeholder="請輸入帳號">
-                            <span class="input-eng-translation left-5word">Please enter your number</span>
-                        </label>
+                    <label class="login-prompt-text">帳號 User ID</label>
+                    <div class="account">
+                        <div class="input">
+                            <input class="inputbox" name="UserName" type="text" placeholder="請輸入帳號" value="" />
+                            <span class="input-eng-translation left-5word">Please enter your account</span>
+                        </div>
+                        <div class="eye">
+                            <i class="fa fa-eye toggle-password"></i>
+                        </div>
                     </div>
-                    <div class="login">
-                        <p>密碼 Password</p>
-                        <label>                       
-                            <input type="password" class="inputbox" placeholder="請輸入密碼">
+
+                    <label class="login-prompt-text">密碼 Password</label>
+                    <div class="password">
+                        <div class="input">
+                            <input class="inputbox" name="Password" type="password" placeholder="請輸入密碼" value="" />
                             <span class="input-eng-translation left-5word">Please enter your password</span>
-                        </label>
-                    </div>     
+                        </div>
+                        <div class="eye">
+                            <i class="fa fa-eye-slash toggle-password"></i>
+                        </div>
+                    </div>
                     <button>登入login</button>
                 </div>
             
